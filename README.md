@@ -26,6 +26,13 @@ Jobber was developed as a **graduation project** by me and my teammate **Halil �
 
 ---
 
+## 👥 Roles
+
+- **Eda Eylül Günay:** Leading frontend, backend, and database development; focusing on intuitive, responsive UI and smooth integration.  
+- **Halil İbrahim Taşkömür:** Leading AI/ML development; building the core semantic similarity system using MiniLM and MPNet.
+
+---
+
 ## 🚧 Project Status
 
 The application is designed to integrate with a custom **backend API** and **machine learning service** for full functionality.
