@@ -558,7 +558,7 @@ const ApplyModal = React.memo(
       };
     }, [feedbackMessage, onClose]);
     return (
-      <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50 p-4">
+      <div className="fixed inset-0 bg-gray-800 bg-opacity-75 backdrop-blur-xs flex justify-center items-center z-50 p-4">
         <div className="relative p-6 sm:p-8 bg-white rounded-lg shadow-xl w-11/12 md:w-1/2 lg:w-1/3 max-h-[80vh] overflow-y-auto">
           <h2 className="text-xl sm:text-2xl font-bold mb-4 text-gray-800">
             Apply for: <span className="text-[#005F73]">{job?.position}</span>
@@ -700,7 +700,7 @@ const DetailModal = ({ job, onClose, onApply, hasApplied, isExpired }) => {
   const descriptionToShow = jobData?.description || job.description;
 
   return (
-    <div className="fixed inset-0 bg-gray-600 bg-opacity-75 flex justify-center items-center z-50 p-4">
+    <div className="fixed inset-0  bg-opacity-75 backdrop-blur-xs flex justify-center items-center z-50 p-4">
       <div className="relative bg-white w-full md:w-3/4 lg:w-2/3 max-h-[85vh] p-6 rounded-lg shadow-xl overflow-y-auto">
         <h2 className="text-2xl font-bold mb-4 text-teal-800">
           {job.position || "Job Details"}

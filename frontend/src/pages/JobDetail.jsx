@@ -1041,7 +1041,7 @@ const ApplicantCvModal = ({ isOpen, onClose, cvData, isLoading, error }) => {
 
 
   return (
-    <div className="fixed inset-0  bg-opacity-60 flex justify-center items-center z-50 p-4">
+    <div className="fixed inset-0  bg-opacity-60 backdrop-blur-xs flex justify-center items-center z-50 p-4">
       <div
         className="bg-white rounded-lg shadow-xl p-6 w-full max-w-2xl max-h-[85vh] overflow-y-auto relative"
         onClick={(e) => e.stopPropagation()}
@@ -1134,7 +1134,7 @@ const ConfirmationModal = ({
 
   return (
     <div
-      className="fixed inset-0  bg-opacity-50 flex justify-center items-center z-50 p-4"
+      className="fixed inset-0 backdrop-blur-xs  bg-opacity-50 flex justify-center items-center z-50 p-4"
       onClick={onClose}
       role="dialog"
       aria-modal="true"

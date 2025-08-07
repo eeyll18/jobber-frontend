@@ -268,7 +268,7 @@ const ApplicationDetailModal = ({ application, onClose }) => {
   const statusLower = application.status?.toLowerCase();
 
   return (
-    <div className="fixed inset-0 z-[100]  bg-opacity-70 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300 ease-in-out">
+    <div className="fixed inset-0 z-[100]  bg-opacity-70 backdrop-blur-xs flex items-center justify-center p-4 transition-opacity duration-300 ease-in-out">
       <div className="relative bg-white w-full md:w-3/4 lg:w-2/3 max-h-[85vh] p-6 rounded-lg shadow-xl overflow-y-auto">
         <button
           onClick={onClose}

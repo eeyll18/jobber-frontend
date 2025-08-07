@@ -210,7 +210,7 @@ const DeleteJobModal = ({ job, closeModal, updateJobList }) => {
   if (!job) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-60 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-60 backdrop-blur-xs">
       <div className="bg-white p-6 sm:p-8 rounded-lg shadow-xl w-full max-w-md mx-4">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">Update</h2>
 

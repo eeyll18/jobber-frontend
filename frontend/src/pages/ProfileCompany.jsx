@@ -151,7 +151,7 @@ function CompanyProfile() {
       <Footer />
 
       {showModal && (
-        <div className="fixed inset-0  bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-sm">
+        <div className="fixed inset-0  bg-opacity-60 flex items-center justify-center z-50 backdrop-blur-xs">
           <div className="relative bg-white p-6 rounded-lg shadow-xl w-full max-w-lg mx-4">
             <h3 className="text-xl font-semibold text-[#00768e] mb-4">
               Update Company Information
