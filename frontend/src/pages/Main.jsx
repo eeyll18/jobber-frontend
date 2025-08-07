@@ -1,4 +1,3 @@
-import React from "react";
 import background from "../assets/background.png";
 import MainNavbar from "../components/layouts/MainNavbar";
 import Footer from "../components/layouts/Footer";
@@ -14,17 +13,13 @@ function Main() {
         {/* Left */}
         <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            Don’t Delay
+            <i>Don’t Delay</i>
             <br />
-            Jobber Today
+            <i>Jobber Today</i>
           </h1>
-          {/* <p className="italic font-semibold text-lg mb-6">
-            FASTER | SMARTER | BETTER
-          </p> */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a href="#about" className="w-full sm:w-auto">
               <button className="bg-white text-[#005270] font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition w-full sm:w-auto">
-                {" "}
                 Learn More ↓
               </button>
             </a>
@@ -117,36 +112,6 @@ function Main() {
         </div>
       </section>
 
-      {/* <section
-        id="testimonials"
-        className="px-6 md:px-10 lg:px-16 py-16 md:py-20 bg-gray-100 text-[#005270] text-center"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">
-          What Our Users Say
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-w-lg md:max-w-4xl mx-auto">
-          <div className="bg-white p-6 rounded-lg shadow">
-            <p className="italic text-sm md:text-base">
-              “Jobber helped me land my dream job in less than a week. The
-              platform is super easy to use!”
-            </p>
-            <h4 className="mt-4 font-semibold text-teal-700 text-sm md:text-base">
-              – Sarah J., UX Designer
-            </h4>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow">
-            <p className="italic text-sm md:text-base">
-              “As an employer, finding qualified candidates has never been this
-              fast and efficient.”
-            </p>
-            <h4 className="mt-4 font-semibold text-teal-700 text-sm md:text-base">
-              – Daniel R., Recruiter
-            </h4>
-          </div>
-        </div>
-      </section> */}
-
       {/* contact */}
       <section
         id="contact"
@@ -162,8 +127,6 @@ function Main() {
             type="text"
             name="name"
             placeholder="Your Name"
-            //   value={formData.name}
-            //   onChange={handleChange}
             className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
             required
           />
@@ -172,8 +135,6 @@ function Main() {
             type="email"
             name="email"
             placeholder="Your Email"
-            //   value={formData.email}
-            //   onChange={handleChange}
             className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
             required
           />
@@ -182,8 +143,6 @@ function Main() {
             name="message"
             rows="5"
             placeholder="Your Message"
-            //   value={formData.message}
-            //   onChange={handleChange}
             className="w-full border border-gray-300 px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-75"
             required
           />
