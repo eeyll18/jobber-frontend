@@ -168,19 +168,16 @@ function JobDetails() {
         const applicantDecimalScore =
           typeof a.similarityScore === "number" ? a.similarityScore : null;
 
-        // Skip filtering if score is not valid
         if (applicantDecimalScore === null) {
-          // If score filters are set, exclude those without scores
           if (minDecimal !== null || maxDecimal !== null) {
             return false;
           }
-          return true; // Otherwise include them
+          return true; 
         }
 
         let passMin = true;
         let passMax = true;
 
-        // Compare with decimal limits
         if (minDecimal !== null && applicantDecimalScore < minDecimal) {
           passMin = false;
         }
@@ -218,7 +215,6 @@ function JobDetails() {
       };
     }
 
-    // Initialize counts for each bucket
     const counts = SCORE_BUCKETS.reduce((acc, bucket) => {
       acc[bucket.name] = 0;
       return acc;
@@ -239,12 +235,10 @@ function JobDetails() {
         scoredApplicantsCount++;
         const scorePercent = score * 100;
 
-        // Check against threshold
         if (scorePercent >= SCORE_THRESHOLD) {
           countAboveThreshold++;
         }
 
-        // Find the correct bucket
         const bucket = SCORE_BUCKETS.find(
           (b) => scorePercent >= b.min && scorePercent <= b.max
         );
@@ -254,18 +248,15 @@ function JobDetails() {
           console.warn(`Score ${scorePercent}% did not fall into any bucket.`);
         }
       } else {
-        // Count applicants with no valid score
         counts["N/A"]++;
       }
     });
 
-    // Format data for Recharts [{ name: 'Bucket Name', count: Number }, ...]
     const formattedChartData = SCORE_BUCKETS.map((bucket) => ({
       name: bucket.name,
       count: counts[bucket.name] || 0,
     }));
 
-    // Calculate summary percentage
     const percentageAboveThreshold =
       scoredApplicantsCount > 0
         ? Math.round((countAboveThreshold / scoredApplicantsCount) * 100)
@@ -284,13 +275,12 @@ function JobDetails() {
 
   const eligibleVisibleApplicantIds = useMemo(() => {
     return filteredAndSortedApplicants
-      .filter((app) => !hasFinalStatus(app)) // Filter out those with final status
+      .filter((app) => !hasFinalStatus(app))
       .map((app) => app.applicationId);
   }, [filteredAndSortedApplicants]);
 
   const handleSelectAllChange = (event) => {
     if (event.target.checked) {
-      // Select only those eligible applicants currently visible
       setSelectedApplicants(eligibleVisibleApplicantIds);
     } else {
       setSelectedApplicants([]);
@@ -299,16 +289,13 @@ function JobDetails() {
 
   const isAllEligibleVisibleSelected = useMemo(() => {
     if (eligibleVisibleApplicantIds.length === 0) {
-      return false; // Nothing eligible to select
+      return false; 
     }
-    // Check if every eligible ID is present in the selectedApplicants array
     return eligibleVisibleApplicantIds.every((id) =>
       selectedApplicants.includes(id)
     );
   }, [eligibleVisibleApplicantIds, selectedApplicants]);
 
-  // Determine if the "Select All" checkbox should be checked
-  // It's checked if the filtered list is not empty AND every filtered applicant is selected
   // const isAllVisibleSelected = useMemo(() => {
   //   if (filteredAndSortedApplicants.length === 0) {
   //     return false;
@@ -972,7 +959,6 @@ const ApplicantCvModal = ({ isOpen, onClose, cvData, isLoading, error }) => {
     if (Array.isArray(data)) {
       if (data.length === 0) return null;
 
-      // Special handling for Skills and Certifications to be comma-separated
       if ((title === "Skills" || title === "Certification") && data.every(item => typeof item === 'string')) {
         return (
           <div className="mb-4">
