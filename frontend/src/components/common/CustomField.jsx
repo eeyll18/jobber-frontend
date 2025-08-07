@@ -7,7 +7,7 @@ export default function CustomField({ type, name, placeholder }) {
         type={type}
         name={name}
         placeholder={placeholder}
-        className="w-full p-2 border rounded-xl"
+                  className="w-full p-2 border border-gray-300 rounded-xl focus:outline-none focus:border-[#00768e] focus:ring-1 focus:ring-[#00768e]"
       />
       {/* <ErrorMessage
         name={name}

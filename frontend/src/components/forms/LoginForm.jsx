@@ -56,7 +56,7 @@ export default function LoginForm({ handleSubmit, initialValues }) {
                 <Field
                   as="select"
                   name="role"
-                  className="w-full p-2 border rounded-xl text-[#00768e]"
+                  className="w-full p-2 border border-gray-300 rounded-xl text-[#00768e] focus:outline-none focus:border-[#00768e] focus:ring-1 focus:ring-[#00768e]"
                   onChange={(e) => {
                     const selectedRole = e.target.value;
                     resetForm(); // Formu ve hataları sıfırla
